@@ -137,7 +137,7 @@ main div p {
 }
 
 .image {
-    margin: 0 20px 40px 0;
+    margin: 0 20px 25px 0;
     float: right;
 }
 
@@ -159,7 +159,7 @@ main div p {
 @media screen and (min-width: 700px) {
     .container {
         display: grid;
-        grid-template-columns: 1fr 20% 20% 20% 1fr;
+        grid-template-columns: 1fr 22% 22% 22% 1fr;
         grid-template-areas: 
         ". . builder . ."
         ". supervisor builder calculator ."
