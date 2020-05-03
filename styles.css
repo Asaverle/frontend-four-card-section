@@ -1,0 +1,193 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+
+/* Header */
+.header {
+    text-align: center;
+    margin: 20px;
+}
+
+.header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 36px;
+    color: #818181;
+    margin: 50px 0 5px 0;
+}
+
+.header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size:  36px;
+    color: #606060;
+    margin-bottom: 20px;
+}
+
+.header p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #9f9f9f;
+    margin-bottom: 100px;
+    max-width: 550px; 
+    margin: 0 auto; 
+}
+
+
+
+
+/* main GRID - mobile first*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr ;
+    grid-template-areas: 
+    ". builder ."
+    ". supervisor ."
+    ". calculator ."
+    ". karma .";
+    grid-gap: 30px;
+}
+
+.team-builder { 
+    grid-area: builder;
+    margin-top: 60px;
+}
+  
+
+.supervisor { 
+    grid-area: supervisor;
+}
+   
+
+.calculator { 
+    grid-area: calculator;
+}
+
+.karma { 
+    grid-area: karma; 
+}
+
+
+
+
+
+/* Boxes Layout */
+main > .team-builder {
+    border-top: 3px solid hsl(0, 78%, 62%);
+    border-radius: 5px;
+    box-shadow: 0px 10px 29px -4px #C4C4C4;
+}
+
+main > .karma {
+    border-top: 3px solid hsl(34, 97%, 64%);
+    border-radius: 5px;
+    box-shadow: 0px 10px 29px -4px #C4C4C4;
+}
+
+main > .supervisor {
+    border-top: 3px solid hsl(180, 62%, 55%);
+    border-radius: 5px;
+    box-shadow: 0px 10px 29px -4px #C4C4C4;
+}
+
+main > .calculator {
+    border-top: 3px solid hsl(212, 86%, 64%);
+    border-radius: 5px;
+    box-shadow: 0px 10px 29px -4px #C4C4C4;
+}
+
+section div {
+    padding: 20px;
+}
+
+main div h1 { 
+    font-family:'Poppins', sans-serif;
+    font-weight: 600;
+    font-size:  20px;
+    color: #4e4e4e;
+    margin-bottom: 10px;
+}
+
+main div p {
+    font-family:'Poppins', sans-serif;
+    font-weight: 400;
+    font-size:  1s5px;
+    color: #9f9f9f;
+    margin-bottom: 30px;
+}
+
+.image {
+    margin: 0 20px 40px 0;
+    float: right;
+}
+
+
+/* Footer */
+.attribution { 
+    font-size: 11px; text-align: center; 
+    margin-top: 70px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+
+
+/* Desktop SIZE layout GRID */
+@media screen and (min-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 20% 20% 20% 1fr;
+        grid-template-areas: 
+        ". . builder . ."
+        ". supervisor builder calculator ."
+        ". supervisor karma calculator ."
+        ". . karma . .";
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    
+    }
+    
+    .team-builder { 
+        grid-area: builder;
+
+    }
+      
+    
+    .supervisor { 
+        grid-area: supervisor;
+
+    }
+       
+    
+    .calculator { 
+        grid-area: calculator;
+
+    }
+    
+    .karma { 
+        grid-area: karma; 
+    }
+}
